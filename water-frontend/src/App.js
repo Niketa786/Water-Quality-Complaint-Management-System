@@ -78,7 +78,6 @@ function App() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     if (!isLoggedIn) {
-      // Alert message updated to English as requested
       alert("⚠️ Please Register or Login first!");
       setShowAuth(true);
       return;
@@ -120,7 +119,7 @@ function App() {
       <nav style={styles.navbar}>
         <div style={styles.navBrand} onClick={() => setViewMode("home")}>
           <span style={{ fontSize: '28px' }}>💧</span>
-          <h2 style={{ margin: 0, color: '#0ea5e9', letterSpacing:'1px' }}>WATER QUALITY MONITORING</h2>
+          <h2 style={{ margin: 0, color: '#0ea5e9', letterSpacing:'1px' }}>WaterCare</h2>
         </div>
         <div style={{ display: 'flex', gap: '30px', alignItems: 'center' }}>
           <span style={styles.navLink} onClick={() => setViewMode("home")}>Home</span>
@@ -133,12 +132,12 @@ function App() {
         </div>
       </nav>
 
-      {/* HOME VIEW - WEBSITE LOOK */}
+      {/* HOME VIEW */}
       {viewMode === "home" && (
         <div>
           <header style={styles.heroSection}>
             <div style={{maxWidth:'900px', margin:'0 auto'}}>
-              <h1 style={styles.heroTitle}>Smart Water Quality Monitoring System</h1>
+              <h1 style={styles.heroTitle}>Water Quality & Complaint Management System</h1>
               <p style={styles.heroSubtitle}>Real-time tracking of water safety, pollution, and supply management for a healthier community.</p>
               <div style={{display:'flex', gap:'15px', justifyContent:'center'}}>
                 <button style={styles.heroCta} onClick={() => document.getElementById('report-form').scrollIntoView({behavior:'smooth'})}>Report an Issue</button>
